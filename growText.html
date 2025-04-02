@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growing Text</title>
+</head>
+<body>
+    <h1 id="text">Hi</h1>
+
+    <script>
+        function growText(){
+            const textElement = document.getElementById("text");
+            var fontSize = 10;
+            const maxFontSize = 20;
+
+            const timer = setInterval(() => {
+                if (fontSize < maxFontSize){
+                    textElement.style.fontSize = fontSize + "px";
+                }else {
+                    clearInterval(timer);
+                }
+            }, 1000);
+        }
+
+        growText();
+    </script>
+</body>
+</html>
